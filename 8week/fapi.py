@@ -13,9 +13,11 @@ def read_item(item_id: int, name: str = None, age: int = 0):
 
 
 @app.post("/plus")
-async def plus_form(num1: int = Form(...), num2: int = Form(...)):
+async def plus_form(num1: int = Form(...), num2: int = Form(...),num3: int = Form(...), num4: int = Form(...)):
     result = num1 + num2
-    return {"msg": f"{num1} + {num2} = {result}"}
+    result2 = num3 + num4
+    return {"msg": f"{num1} + {num2} = {result} | {num3} + {num4} = {result2}"}
+  
 
 app.mount("/", StaticFiles(directory="static", html=True), name="static")
 
