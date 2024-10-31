@@ -2,7 +2,7 @@ from fastapi import FastAPI, Form
 from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
-
+ 
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
