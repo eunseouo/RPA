@@ -6,7 +6,7 @@ import time
 url ='https://www.google.co.kr/'
 driver = webdriver.Chrome()
 driver.get(url)
-time.sleep(3)
+time.sleep(3) 
 
 search_box = driver.find_element(By.CSS_SELECTOR,'#APjFqb')
 search_box.send_keys("KBO 한국시리즈")

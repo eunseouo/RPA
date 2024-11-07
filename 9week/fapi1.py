@@ -23,6 +23,7 @@ async def create_upload_file(file: UploadFile = File(...)):
 
     return {"filename": file.filename, "location": str(save_path)}
 
+
 app.mount("/", StaticFiles(directory="static", html=True), name="static")
 
 if __name__ == '__main__':
